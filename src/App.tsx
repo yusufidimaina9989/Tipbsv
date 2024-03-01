@@ -1,4 +1,3 @@
-// App.tsx
 import React, { useEffect, useRef, useState } from "react";
 import ItemList from "./projectList";
 import NewItem from "./newProject";
@@ -18,8 +17,6 @@ import { AddTask, Done, Home, Info, Wallet } from "@mui/icons-material";
 import ListIcon from "@mui/icons-material/List";
 import Homes from "./home";
 import { Button } from "@mui/material";
-import Snackbar from '@mui/material/Snackbar';
-import MuiAlert from '@mui/material/Alert';
 // `npm run deploycontract` to get deployment transaction id
 const contract_id = {
   /** The deployment transaction id */
