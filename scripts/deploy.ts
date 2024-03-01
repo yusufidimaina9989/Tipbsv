@@ -21,9 +21,12 @@ async function main() {
     }))
 
     // TODO: Adjust the amount of satoshis locked in the smart contract:
-    const amount = 1
+    const amount = 100
 
-    const instance = new Tipbsv()
+    const instance = new Tipbsv(
+        // TODO: Pass constructor parameter values.
+        0n
+    )
 
     // Connect to a signer.
     await instance.connect(signer)

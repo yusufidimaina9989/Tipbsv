@@ -26,7 +26,7 @@ const ItemView: React.FC<ItemProps> = ({
   handleRemoved,
 }) => {
   const [tipAmount, setTipAmount] = useState("");
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState<bsv.Address | undefined>(undefined);
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -82,8 +82,7 @@ const ItemView: React.FC<ItemProps> = ({
         </Typography>
         <br />
         <div style={{ display: "flex", alignItems: "center" }}>
-          {item.projectAddr ===
-          user ? (
+          {user && (item.projectAddr === user.toByteString()) ? (
             <Button
               variant="contained"
               onClick={() => handleRemoved(idx)}

@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { Scrypt, bsv } from 'scrypt-ts';
 
 import { Tipbsv } from './contracts/tipbsv';
 import artifact from '../artifacts/tipbsv.json';
+import { Scrypt, bsv } from 'scrypt-ts';
 
 Tipbsv.loadArtifact(artifact);
 
